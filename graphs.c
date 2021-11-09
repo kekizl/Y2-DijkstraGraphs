@@ -264,7 +264,6 @@ int findShortestPathTo(DijkstraTable *pTable, int nodeFrom, int nodeTo, int path
 	//initiate variables
 	int currentNode = 0;
 	int nextNode = 0;
-	int i;
 	int verticesAdded = 0;
 
 	//set currentNode as the one you want to get to
