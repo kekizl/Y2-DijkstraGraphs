@@ -162,35 +162,28 @@ int loadMatrixFromFile(AdjacencyMatrix *pMatrix, char filename[])
     // Provide your own implementation here..
 	
 	// open file
-	/*
+	
 	FILE *rfile; 
-		rfile=fopen("adjacency_matrix.txt", "r");
+		rfile=fopen(filename, "r");
 
 	if(rfile == NULL){
-		printf("File failed to open!!");
-		return 0;
+		return FILE_IO_ERROR;
 	}
 	
-	int tempweight;
 	int i;
 	int j;
 	printf("test1");
-	for(i = 0; NUMBER_OF_VERTICES; i++){
+	for(i = 0; i < NUMBER_OF_VERTICES; i++){
 	
-		for(j = 0; NUMBER_OF_VERTICES; j++){
+		for(j = 0; j < NUMBER_OF_VERTICES; j++){
 			fscanf(rfile, "%d ", pMatrix->matrix[i][j]);
-			printf("%d", pMatrix->matrix[i][j]);
-
 		}
 		fscanf(rfile, "\n");
 	}
 	fclose(rfile);
 
 	return SUCCESS;
-	// if file does not exist return errorr
-	
-*/
-    }    // using void cast on 
+    }  
 
 int doDijsktraAlgorithm(AdjacencyMatrix *pMatrix, DijkstraTable *pTable, int startNode)
 {
